@@ -1,9 +1,9 @@
 namespace api.Domain
 {
-    public interface IBaseModel
+    public abstract class IBaseModel
     {
-        string Id { get; set; }
-        string CreatedAt { get; set; }
-        string UpdatedAt { get; set; }
+        public string? Id { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     }
 }
